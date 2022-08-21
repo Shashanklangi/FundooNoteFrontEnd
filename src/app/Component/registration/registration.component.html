@@ -1,0 +1,67 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="Main">
+    <img class=" logo" src="assets/Pictures/Logo2.jpg" alt="Fundoo Logo">
+    <p class="para">Create your Account</p>
+    <mat-card class="Main_Block">
+
+
+      <div class="left_Block">
+        <div class="name">
+
+          <mat-form-field appearance="outline" class="first_name">
+            <mat-label class="boxtext">First name</mat-label>
+            <input matInput placeholder class="boxtext" formControlName="firstName">
+            <mat-error>Enter first and last name</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="last_name">
+            <mat-label class="boxtext">Last name</mat-label>
+            <input matInput placeholder class="boxtext" formControlName="lastName">
+            <mat-error>Enter first and last name</mat-error>
+          </mat-form-field>
+
+        </div>
+        <div class="user_name">
+          <mat-form-field appearance="outline" class="user_box">
+            <mat-label class="boxtext">Username</mat-label>
+            <input matInput placeholder class="boxtext" formControlName="email">
+            <mat-error>Enter valid email id</mat-error>
+            <mat-hint class="text">You can use letters, numbers & periods</mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="Password_Main">
+
+          <mat-form-field appearance="outline" class="first_name">
+            <mat-label class="boxtext">Password</mat-label>
+            <input matInput type="password" placeholder class="boxtext" formControlName="password">
+            <mat-error>Enter correct password</mat-error>
+            <mat-hint></mat-hint>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="last_name">
+            <mat-label class="boxtext">Confirm</mat-label>
+            <input matInput type="password" placeholder class="boxtext" formControlName="confirmPassword">
+            <mat-error>Enter correct password</mat-error>
+          </mat-form-field>
+          <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
+
+        </div>
+        <div class="checkbox">
+          <mat-checkbox class="boxtext">Show password</mat-checkbox>
+        </div>
+
+        <div class="name">
+
+          <button mat-button color="primary">Sign in instead</button>
+          <button mat-raised-button color="primary" class="nextbuttton">Next</button>
+
+        </div>
+      </div>
+
+      <div class="Right_Block">
+        <img src="assets/Pictures/Logo1.jpg" alt="Shild Image" class="Image">
+        <h1 class="h1">One account. All of Fandoo working for you.</h1>
+      </div>
+    </mat-card>
+  </div>
+</form>
