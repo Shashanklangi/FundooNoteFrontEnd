@@ -14,5 +14,9 @@ export class HttpService {
     
     return this.httpClient.post(this.baseUrl+url,reqdata,token && httpOptions)
   }
+  postServiceReset(url : string, reqdata : any, token : boolean=true, httpOptions : any={} ){
+    
+    return this.httpClient.post(this.baseUrl+url,reqdata,token && httpOptions)
+  }
   
 }

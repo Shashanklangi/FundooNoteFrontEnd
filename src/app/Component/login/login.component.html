@@ -1,43 +1,46 @@
 <div class="main">
+
     <img src="assets\Pictures\Logo2.jpg" alt="Fundo logo" class="logo">
     <mat-card class="main_block">
         <!-- <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="column"> -->
-            <form [formGroup]="loginForm">
-                <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="column">
-                    <div class="top">
-                        <mat-card-title class="title">Login</mat-card-title>
-                        <p>Use your Fundoo account</p>
-                    </div>
-                    
-                    <div class="mail">
-                        <mat-form-field appearance="outline" class="input_box">
-                            <mat-label>Email</mat-label>
-                            <input matInput placeholder formControlName="email">
-                            <mat-error>Enter valid email id</mat-error>
-                        </mat-form-field>
-                    </div>
+        <form [formGroup]="loginForm">
+            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+                <div class="top">
+                    <mat-card-title class="title">Login</mat-card-title>
+                    <p>Use your Fundoo account</p>
+                </div>
 
-                    <div class="Password">
-                        <mat-form-field appearance="outline" class="input_box">
-                            <mat-label>Password</mat-label>
-                            <input matInput placeholder formControlName="password">
-                            <mat-error>Enter correct password</mat-error>
-                        </mat-form-field>
-                    </div>
+                <div class="mail">
+                    <mat-form-field appearance="outline" class="input_box">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder formControlName="email">
+                        <mat-error>Enter valid email id</mat-error>
+                    </mat-form-field>
+                </div>
 
-                    <p>Not your computer? Use Guest mode to sign in privately. <b><a href="www.google.com">Learn more</a></b>
-                    </p>
-                        
-                    <div class="action">
-                        <div class="fpass">
-                            <button mat-button color="primary" href="www.google.com">Forget Password</button>
-                        </div>
-                        <div class="login">
-                            <button mat-flat-button color="primary"(click)="Login()">Login</button>
-                        </div>
+                <div class="Password">
+                    <mat-form-field appearance="outline" class="input_box">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder formControlName="password">
+                        <mat-error>Enter correct password</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <p>Not your computer? Use Guest mode to sign in privately. <b><a href="www.google.com">Learn
+                            more</a></b>
+                </p>
+
+                <div class="action">
+                    <div class="fpass">
+                        <button mat-button color="primary" href="www.google.com">Forget Password</button>
+                    </div>
+                    <div class="login">
+                        <button mat-flat-button color="primary" (click)="login()">Login</button>
                     </div>
                 </div>
-            </form>
+            </div>
+        </form>
         <!-- </div> -->
     </mat-card>
+
 </div>
