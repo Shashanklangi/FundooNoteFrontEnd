@@ -4,12 +4,20 @@ import { ForgetPasswordComponent } from './Component/forget-password/forget-pass
 import { LoginComponent } from './Component/login/login.component';
 import { RegistrationComponent } from './Component/registration/registration.component';
 import { ResetPasswordComponent } from './Component/reset-password/reset-password.component';
+import { DashboardComponent } from './Component/dashboard/dashboard.component';
+import { GetAllNotesComponent } from './Component/get-all-notes/get-all-notes.component';
 
 const routes: Routes = [
   {path:'Registration',component:RegistrationComponent},
   {path:'Login',component:LoginComponent},
   {path:'ForgetPassword',component:ForgetPasswordComponent},
   {path:'ResetPassword/:token',component:ResetPasswordComponent},
+  {path:'home',component:DashboardComponent,
+  children:[
+    {path:'', redirectTo:"/home/notes", pathMatch:'full' },
+    {path:'notes', component:GetAllNotesComponent}
+  ]
+  }
 ];
 
 @NgModule({

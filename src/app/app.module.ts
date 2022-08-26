@@ -15,6 +15,13 @@ import { ForgetPasswordComponent } from './Component/forget-password/forget-pass
 import { ResetPasswordComponent } from './Component/reset-password/reset-password.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './Component/dashboard/dashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import { CreateNotesComponent } from './Component/create-notes/create-notes.component';
+import { GetAllNotesComponent } from './Component/get-all-notes/get-all-notes.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +29,10 @@ import { HttpClientModule } from '@angular/common/http';
     RegistrationComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    DashboardComponent,
+    CreateNotesComponent,
+    GetAllNotesComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +44,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatButtonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatListModule
     
   ],
   providers: [],

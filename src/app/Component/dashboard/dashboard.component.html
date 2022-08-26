@@ -1,0 +1,45 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar class="example-toolbar">
+    <div class="keep-icon">
+      <button class="hov" mat-icon-button (click)="snav.toggle()">
+        <mat-icon class="menu-icon">menu</mat-icon>
+      </button>
+      <img src="assets/Pictures/Logo3.png" height="45px" width="60px">
+      <h1 class="example-app-name">Fundoo</h1>
+    </div>
+
+    <div class="search-box">
+      <img src="../../../assets/Symbols/Search.svg" />
+      <input matInput placeholder="search" />
+    </div>
+    <div class="right-icons">
+      <img src="../../../assets/Symbols/Refresh.svg" />
+      <img src="../../../assets/Symbols/View.svg" />
+      <img src="../../../assets/Symbols/Setting.svg" />
+    </div>
+    <div class="menu">
+      <img src="../../../assets/Symbols/App.svg" />
+      <img src="../../../assets/Symbols/profile.png" />
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+      <mat-nav-list class="nav-list">
+        <a mat-list-item routerLink="notes"><img src="../../../assets/Symbols/bulb.svg" />notes</a>
+        <a mat-list-item routerLink="."><img src="../../../assets/Symbols/notify.svg" />reminder</a>
+        <a mat-list-item routerLink="."><img src="../../../assets/Symbols/edit.svg" />label</a>
+        <a mat-list-item routerLink="archive"><img src="../../../assets/Symbols/archive.svg" />archive</a>
+        <a mat-list-item routerLink="trash"><img src="../../../assets/Symbols/delete.svg" />trash</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="content-container">
+      <p>
+        <router-outlet></router-outlet>
+      </p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
