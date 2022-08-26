@@ -1,0 +1,46 @@
+<div>
+    <div *ngIf="display;then takeNotes else inputNotes"></div>
+    <ng-template #takeNotes>
+      <div class="takenotes">
+        <input class="notesbar" type="text" placeholder="Take a note..." (click)="display = !display">
+        <button class="notesbutton">
+          <img class="notes_img" src="../../../assets/Icons/click.png">    
+          <img class="notes_img" src="../../../assets/Icons/brush.png">
+          <img class="notes_img" src="../../../assets/Icons/Picture.png">
+        </button>
+      </div>
+    </ng-template>
+    <ng-template #inputNotes>
+      <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+        <div class="createnotes">
+          <div class="notesfield">
+  
+            <div class="titlebar">
+              <input class="title" type="text" placeholder="Title"  formControlName="title">
+              <button class="notesbutton">
+                <img class="notes_img" src="../../../assets/Icons/pin.png">
+              </button>
+            </div>
+            <input class="desc" type="text" placeholder="Description" style="font-size: 15px; font-weight: 200;"  formControlName="Description">
+            <div class="notesicon">
+              <div class="icons">
+                <button class="notesbutton">
+                  <img src="../../../assets/Icons/Alart.png">
+                  <img src="../../../assets/Icons/add person.png">
+                  <img src="../../../assets/Icons/Colour.png">
+                  <img src="../../../assets/Icons/Picture.png">
+                  <img src="../../../assets/Icons/Archive.png">
+                  <img src="../../../assets/Icons/Three dot.png">
+                  <img src="../../../assets/Icons/undo.png">
+                  <img src="../../../assets/Icons/redo.png">
+                </button>
+              </div>
+              <button class="notesclose notesbutton">Close</button>           
+            </div>
+          </div>
+        </div>
+      </form>
+    </ng-template>
+  </div>
+  
+  

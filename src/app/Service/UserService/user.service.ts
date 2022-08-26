@@ -57,9 +57,8 @@ export class UserService {
         'Authorization':'Bearer '+ token
       })
     }
-    // return this.httpService.postService('/User/ResetPassword',reqdata,true,header)
+    
     return this.httpService.postServiceReset('/User/ResetLink?password='+reqdata.password+'&confirmPassword='+reqdata.confirmPassword,{},true,header)
    
   }
 }
-// ?Password='+reqdata.Password+'&confirmPassword='+reqdata.confirmPassword,{}

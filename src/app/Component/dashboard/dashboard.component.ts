@@ -32,4 +32,8 @@ export class DashboardComponent implements OnInit {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
+  logOut(){
+    localStorage.removeItem('token')
+  }
+
 }

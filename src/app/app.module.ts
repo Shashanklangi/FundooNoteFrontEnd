@@ -22,6 +22,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import { CreateNotesComponent } from './Component/create-notes/create-notes.component';
 import { GetAllNotesComponent } from './Component/get-all-notes/get-all-notes.component';
+import { MatMenuModule } from '@angular/material/menu';
+// import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
+
 
 @NgModule({
   declarations: [
@@ -48,8 +53,9 @@ import { GetAllNotesComponent } from './Component/get-all-notes/get-all-notes.co
     MatSidenavModule,
     MatIconModule,
     MatToolbarModule,
-    MatListModule
-    
+    MatListModule,
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
